@@ -65,11 +65,11 @@ I tried the Naive Bayes, SVM and Decision Trees algorithms.
 ####All results of examination I included in the following table
 
 
-**Naive Bayes**		Accuracy: 0.81300  Precision: 0.26082      Recall: 0.11750 F1: 0.16201     F2: 0.13201
+		**Naive Bayes**		Accuracy: 0.81300  Precision: 0.26082      Recall: 0.11750 F1: 0.16201     F2: 0.13201
 
-**Decision Trees**	Accuracy: 0.83354       Precision: 0.46656      Recall: 0.57200 F1: 0.51393     F2: 0.54726
+		**Decision Trees**	Accuracy: 0.83354       Precision: 0.46656      Recall: 0.57200 F1: 0.51393     F2: 0.54726
 
-**SVM**				ERROR !!!!
+		**SVM**				ERROR !!!!
 
 SVM algorithm returned the next error :
 ```
@@ -89,9 +89,9 @@ The purpose of tuning is to find best sets of parameters for particular dataset.
 ####GridSearchCV
 I apply GridSearchCV to tune the following parameters
 
-|Parameter          	Settings for investigation
-|min_samples_split	 	[1-60]                    
-|random_state	     	[1-50]                    
+	|Parameter          	Settings for investigation
+	|min_samples_split	 	[1-60]                    
+	|random_state	     	[1-50]                    
 
 
 As a result i obtained best performance when random_state=20, min_samples_split=20 
@@ -105,14 +105,14 @@ To validate my analysis I used stratified shuffle split cross validation Stratif
 For evaluation purpose i used : Precision,recall,accuracy,true positives,false positives,false negatives,true negatives .
 Final results can be found in table below
 
-|**metric**				**value**
-|**Precision**			**0.46656**
-|**Recall**				**0.57200**
-|**Accuracy** 			**0.8335**
-|**True positives** 	**1144**
-|**False positives**	**1308**
-|**False negatives**	**856**
-|**True negatives**		**9692**
+	|**metric**				**value**
+	|**Precision**			**0.46656**
+	|**Recall**				**0.57200**
+	|**Accuracy** 			**0.8335**
+	|**True positives** 	**1144**
+	|**False positives**	**1308**
+	|**False negatives**	**856**
+	|**True negatives**		**9692**
 
 	
 ####Conclusion
