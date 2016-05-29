@@ -171,7 +171,5 @@ In such conditions result we received good enough, but it's not perfect, of cour
 
 
 	[1]: http://scikit-learn.org/stable/documentation.html
-	
 	[2]: http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/
-	
 	[3]: http://scikit-learn.org/stable/modules/cross_validation.html 
