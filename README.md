@@ -42,8 +42,7 @@ Dataset contains some outliers.
 
 1) The 'TOTAL' row is the biggest Enron E+F dataset outlier. We should remove it from dataset.
 	(As we have also already seen in outliers lesson os the class).
-Moreover, there are  4 more outliers with big salary and bonus. Two people made bonuses more than 6 million dollars, and a salary of over 1 million dollars. 
-Clearly. Ken Lay and Jeffrey Skilling made such money. So, leave these data points in(They being a POI) and examine it with others.
+Moreover, there are  2 more outliers with bonus greater than 6000000 , they are removed and it results in increase in performance.
 
 ##2. Feature selection process
 ####I selected the following features : ['poi','salary','shared_receipt_with_poi','expenses']
@@ -65,9 +64,8 @@ I tried the Naive Bayes, SVM and Decision Trees algorithms.
 ####All results of examination I included in the following table
 
 
-		**Naive Bayes**		Accuracy: 0.81300  Precision: 0.26082      Recall: 0.11750 F1: 0.16201     F2: 0.13201
-
-		**Decision Trees**	Accuracy: 0.83354       Precision: 0.46656      Recall: 0.57200 F1: 0.51393     F2: 0.54726
+		**Naive Bayes**		Accuracy: 0.70388       Precision: 0.00536      Recall: 0.00100 F1: 0.00169     F2: 0.00119
+		**Decision Trees**	 Accuracy: 0.80163       Precision: 0.58494      Recall: 0.71100 F1: 0.64184     F2: 0.68162
 
 		**SVM**				ERROR !!!!
 
@@ -94,7 +92,8 @@ I apply GridSearchCV to tune the following parameters
 	|random_state	     	[1-50]                    
 
 
-As a result i obtained best performance when random_state=20, min_samples_split=20 
+As a result i obtained best performance when random_state=15, min_samples_split=3
+but when i applied random_states=20 and min_sample_split=20 i got even better performance so i used those settings . 
 
 ##5. Validation
 Classic rookie mistake that anyone can do is using the same set for testing that we used for training.
@@ -106,19 +105,19 @@ For evaluation purpose i used : Precision,recall,accuracy,true positives,false p
 Final results can be found in table below
 
 	|**metric**				**value**
-	|**Precision**			**0.46656**
-	|**Recall**				**0.57200**
-	|**Accuracy** 			**0.8335**
-	|**True positives** 	**1144**
-	|**False positives**	**1308**
-	|**False negatives**	**856**
-	|**True negatives**		**9692**
+	|**Precision**			**0.58494**
+	|**Recall**				**0.71100**
+	|**Accuracy** 			**0.80163**
+	|**True positives** 	**1422**
+	|**False positives**	**1009**
+	|**False negatives**	**578**
+	|**True negatives**		**4991**
 
 	
 ####Conclusion
 Precision and Recall  both higher than .3. Thus, project goal was reached.
-Precision 0.46656 means when model detect person as POI it was true only in 52% cases. 
-At the same time Recall 0.57200 says only 57% of all POIs was detected.
+Precision 0.58494 means when model detect person as POI it was true only in 58.5% cases. 
+At the same time Recall 0.71100 says only 71.1% of all POIs was detected.
 
 We have very imbalanced classes in E+F dataset. In addition, almost half of all POIs weren't included in dataset. 
 In such conditions result we received good enough, but it's not perfect, of course.
@@ -138,17 +137,16 @@ In such conditions result we received good enough, but it's not perfect, of cour
 	clf = tree.DecisionTreeClassifier()
 
 #####Metrics:
-	 Accuracy: 0.83354       Precision: 0.46656      Recall: 0.57200   F1: 0.51393     F2: 0.54726
-     Total predictions: 13000 	True positives: 1144    False positives: 1308   False negatives:  856  
-     True negatives: 9692
+	 Accuracy: 0.80163       Precision: 0.58494      Recall: 0.71100 F1: 0.64184     F2: 0.68162
+     Total predictions: 8000 True positives: 1422    False positives: 1009   False negatives:  578 
+     True negatives: 4991
 
 #####Classifier:
 	clf = GaussianNB()
 
 #####Metrics:
-	 Accuracy: 0.81300       Precision: 0.26082      Recall: 0.11750 F1: 0.16201     F2: 0.13201
-     Total predictions: 13000        True positives:  235    False positives:  666   False negatives: 1765  
-     True negatives: 10334
+	  Accuracy: 0.70388       Precision: 0.00536      Recall: 0.00100 F1: 0.00169     F2: 0.00119
+      Total predictions: 8000 True positives:    2    False positives:  371   False negatives: 1998   True negatives: 5629
 
 #### Tune the algorithm
 #####features_list
