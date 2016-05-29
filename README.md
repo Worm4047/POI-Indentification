@@ -165,13 +165,13 @@ In such conditions result we received good enough, but it's not perfect, of cour
 
 
 #Related links
-- [Documentation of scikit-learn 0.15][1]
-- [Selecting good features � Part I: univariate selection][2]
-- [Cross-validation: the right and the wrong way][3]
+	- [Documentation of scikit-learn 0.15][1]
+	- [Selecting good features � Part I: univariate selection][2]
+	- [Cross-validation: the right and the wrong way][3]
 
 
-	[1]: http://scikit-learn.org/stable/documentation.html
+		[1]: http://scikit-learn.org/stable/documentation.html
 	
-	[2]: http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/
+		[2]: http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/
 	
-	[3]: http://scikit-learn.org/stable/modules/cross_validation.html 
+		[3]: http://scikit-learn.org/stable/modules/cross_validation.html 
