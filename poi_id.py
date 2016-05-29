@@ -79,16 +79,16 @@ clf.fit(features, labels)
 """
 
 ###SVM #####
-"""Uncomment to try """
+"""Uncomment to try
 from sklearn.svm import SVC
 clf = SVC(C=1.0, kernel="rbf")
 clf.fit(features, labels)
-
+"""
 ###DECISION TREE ###
-"""from sklearn import tree
+from sklearn import tree
 clf = tree.DecisionTreeClassifier(random_state=20, min_samples_split=20)
 clf = clf.fit(features, labels)
-"""
+
 
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
 ### using our testing script.
