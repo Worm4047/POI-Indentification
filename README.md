@@ -1,4 +1,4 @@
-# Udacity Introduction to machine learning.####
+# Udacity Introduction to machine learning
 
 ## 1. Dataset and goal of project
 
